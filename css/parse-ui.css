@@ -1,0 +1,169 @@
+.tracery-grammar {
+	display: inline-block;
+	margin: 3px;
+	padding: 6px;
+	background-color: hsla(40, 20%, 90%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+	border: 6px solid violet;
+}
+
+.tracery-symbol-key {
+	border-radius: 30px;
+	display: inline-block;
+	margin: 1px;
+
+	padding: 1px 2px;
+	background-color: hsla(190, 90%, 70%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+
+
+.tracery-symbol-rules {
+	display: inline-block;
+	margin: 3px;
+	padding: 6px;
+	background-color: hsla(40, 20%, 90%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+	border: 1px solid magenta;
+}
+
+
+.tracery-node {
+	display: inline-block;
+	margin: 2px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+	
+}
+
+.tracery-node-rule {
+	background-color: hsla(200, 70%, 90%, 1);
+	border: 2px solid hsla(200, 90%, 50%, 1);
+	
+}
+
+.tracery-node-error {
+	display: inline-block;
+	background-color: hsla(0, 70%, 90%, 1);
+	color: hsla(0, 70%, 50%, 1);
+}
+
+.tracery-node-error .header {
+	box-shadow: none;
+	font-size: 60%;
+	font-style: italic;
+	color: hsla(0, 70%, 50%, .8);
+	
+}
+
+.tracery-node>.content {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.tracery-node-error .content {
+	font-size: 80%;
+	font-style: italic;
+	color: hsla(0, 70%, 50%, .8);
+}
+
+.tracery-node-action {
+	background-color: hsla(140, 40%, 90%, 1);
+	border: 2px solid hsla(140, 80%, 50%, 1);
+	
+}
+
+.tracery-node-tag {
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: hsla(180, 60%, 90%, 1);
+	
+}
+
+
+.tracery-node-key {
+	padding: 2px 4px;
+	color:hsla(180, 60%, 30%, 1);
+	font-family: monospace;
+}
+
+
+.tracery-node-header {
+	display: flex;
+	flex-direction: row;
+	padding: 3px;
+	background-color: hsla(240, 20%, 90%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+
+}
+.tracery-node pre {
+	margin: 0px;
+	
+}
+.tracery-node-text {
+	padding: 2px 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+	background-color: hsla(40, 10%, 100%, 1);
+}
+
+.tracery-node-type {
+	font-size: 80%;
+	font-weight: bold;
+}
+
+.tracery-node-raw-oneline  {
+	max-width: 300px;
+	overflow: scroll;
+}
+.tracery-node-raw-oneline pre {
+
+	white-space: nowrap;   
+}
+
+
+.parse-block {
+	display: inline-block;
+	margin: 3px;
+	padding: 3px;
+	background-color: hsla(40, 20%, 90%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+	border: 2px solid aquamarine;
+}
+
+.parse-block pre {
+	display: inline-block;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: hsla(320, 80%, 70%, 1);
+	border-radius: 100px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+	
+}
+
+.parse-protector {
+	display: inline-block;
+	margin: 3px;
+	padding: 1px 4px;
+	background-color: hsla(120, 80%, 70%, 1);
+	border-radius: 100px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+
+
+.parse-optree {
+	display: inline-block;
+	margin: 3px;
+	padding: 1px 4px;
+	background-color: hsla(120, 80%, 70%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+
+.parse-op {
+	display: inline-block;
+	margin: 3px;
+	padding: 1px 4px;
+	background-color: hsla(320, 80%, 80%, 1);
+	border-radius: 100px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+

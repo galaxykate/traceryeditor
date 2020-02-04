@@ -1,0 +1,25 @@
+### General information
+
+- json-editor version:
+
+### Expected behavior
+
+### Actual behavior
+
+### Steps to reproduce the behavior
+
+Direct link to example: https://json-editor.github.io/json-editor/
+
+```javascript
+{
+  "title": "json schema example",
+  "type": "object",
+  "properties": {
+    "example": {
+      "type": "string",
+      "description": "This is an example schema.",
+      "default": "Please edit me."
+    }
+  }
+}
+```

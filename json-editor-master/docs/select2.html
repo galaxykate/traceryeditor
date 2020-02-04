@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JSON Editor Select2 Integration Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@latest/dist/js/select2.min.js "></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@latest/dist/css/select2.min.css">
+  </head>
+
+  <body>
+    <h1>JSON Editor Select2 Integration Example</h1>
+    
+    <p style='margin-bottom:20px;'>This example demonstrates JSONEditor's integration with Select2</p>
+    
+    <div id='editor_holder'></div>
+    <button id='submit'>Submit (console.log)</button>
+    
+    <script>
+
+      // Initialize the editor with a JSON schema
+      var editor = new JSONEditor(document.getElementById('editor_holder'),{
+        schema: {
+          type: "object",
+          title: "Text",
+          required: ["fontSize","color","font","weight","tags","possibleFonts"],
+          properties: {
+            fontSize: {
+              format: "select2",
+              type: "integer",
+              enum: [10,11,12,14,16,18,20,22,24,36,48,60,72,100],
+              default: 24,
+              options: {
+                // Override defaullt options
+                select2: {
+                  width: 'off'
+                }
+              }
+            },
+            color: {
+              type: "string",
+              format: "select2",
+              enum: ["black","red","green","blue","yellow","orange","purple","brown","white","cyan","maagenta"]
+            },
+            font: {
+              type: "string",
+              format: "select2",
+              enumSource: "possible_fonts",
+              watch: {
+                "possible_fonts": "root.possibleFonts"
+              },
+            },
+            weight: {
+              type: "string",
+              format: "select2",
+              enum: ["normal","bold","bolder","lighter"],
+              options: {
+                enum_titles: ["Normal (400)","Bold (700)","Bolder (900)","Lighter (200)"]
+              }
+            },
+            tags: {
+              type: "array",
+              format: "select2",
+              uniqueItems: true,
+              items: {
+                type: "string",
+                enum: ["bold","italic","smallcaps"]
+              }
+            },
+            possibleFonts: {
+              type: "array",
+              format: 'table',
+              items: {
+                type: "string"
+              },
+              default: ["Arial","Times","Helvetica","Comic Sans"],
+              options: {
+                collapsed: true
+              }
+            }
+          }
+        },
+        startval: {
+          color: "red"
+        }
+      });
+
+      // Hook up the submit button to log to the console
+      document.getElementById('submit').addEventListener('click',function() {
+        // Get the value from the editor
+        console.log(editor.getValue());
+      });
+    </script>
+  </body>
+</html>
