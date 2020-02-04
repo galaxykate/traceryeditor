@@ -1,8 +1,0 @@
-{
-  "type": "object",
-  "properties": {
-    "string": {
-      "$ref": "string.json"
-    }
-  }
-}

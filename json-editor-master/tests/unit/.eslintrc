@@ -1,8 +1,0 @@
-// eslint config file for unit tests
-{
-  "extends":"../../.eslintrc",  
-  "env":
-  {
-    "jasmine":true 
-  }
-}
