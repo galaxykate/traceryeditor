@@ -40,3 +40,10 @@ Make users?
 For each rule: click to edit rule text *inside the rule*
 Always show rule text?
 Labels for stuff: not for sections
+
+----------------
+icons small on firefox
+toggle editor/json mode
+editing viz rules doesnt do anything
+code mode does bad stuff
+
