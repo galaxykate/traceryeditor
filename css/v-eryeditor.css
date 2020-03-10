@@ -1,17 +1,154 @@
+
+
 .ery-editor {
-	width: 100%;
-	height: 100%;
-	border: 3px solid magenta;
+	margin: 0px 7px;
+	
+	flex: 1;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
+	overflow: hidden;
 }
 
 .column {
-	border: 3px solid blue;
+	margin: 0px 18px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	
+	
 }
 
+.column-section {
+	/*background-color: hsla(26, 90%, 98%, 1);*/
+	
+}
+
+.ery-trace {
+	margin: 2px;
+	overflow: hidden;
+	background-color: hsla(26, 90%, 98%, 1);
+	border-radius: 10px;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, .4);
+}
+.ery-trace-text {
+	margin: 0px;
+	padding: 2px 4px;
+}
+
+.ery-keybrowser {
+	max-height: 120px;
+	overflow: scroll;
+}
+
+
 .ery-editor-jsonholder {
+	flex: 1;
 	width: 100%;
 	height: 100%;
+	box-sizing: border-box;
+}
+
+.ery-editor-controls {
+
+	z-index: 70;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+	
+}
+
+
+.ery-editor-ruleview {
+	position: relative;
+	overflow: scroll;
+	background-color: hsla(150, 50%, 90%, 1);
+	min-height: 10px;
+	z-index: 90;
+}
+
+
+.ery-preview {
+	/*border-top: 1px solid black;*/
+	z-index: 80;
+	background-color: hsla(150, 10%, 90%, 1);
+	box-shadow: 0px -3px 3px rgba(0, 0, 0, .2);
+	
+	position: relative;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	
+}
+
+.ery-preview>.content {
+overflow: scroll;
+flex: 1;
+}
+
+
+
+.ery-header,div.jsoneditor-menu {
+	z-index: 100;
+	position: relative;
+	background-color: hsla(35, 100%, 98%, 1);
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, .4);
+}
+
+
+.content {
+	z-index: 60;
+	position: relative;
+}
+
+.ery-editor-jsoncolumn {
+	flex: 1;
+}
+
+.ery-editor-viewcolumn {
+	width: 50%;
+	
+}
+
+
+.ery-key {
+	border-radius: 30px;
+	display: inline-block;
+	margin: 1px;
+	position: relative;
+
+	padding: 0px 3px;
+	background-color: hsla(190, 90%, 70%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+
+.ery-key.selected {
+	border: 2px solid hsla(190, 90%, 50%, 1);
+	background-color: hsla(190, 90%, 90%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+
+
+
+.ery-key-errorblip {
+	text-align: center;
+	width: 15px;
+	height: 15px;
+	font-size: .8em;
+	border-radius: 40px;
+	right: -5px;
+	top: -5px;
+	background-color:  hsla(350, 90%, 70%, 1);
+	position: absolute;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+
+.ery-ruleeditor {
+	border-radius: 5px;
+	display: inline-block;
+	margin: 1px;
+	position: relative;
+
+	padding: 0px 3px;
+	background-color: hsla(32, 10%, 80%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
 }

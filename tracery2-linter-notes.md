@@ -24,3 +24,19 @@ detect pop for push
 unparsable actions
 unreachable symbols
 unused symbols
+
+
+# reminders
+
+code mode *ONLY* renders some set of stuff, so you can't scroll to an element just by searching the DOM for it)
+
+---------
+3/4
+Generative Widget
+
+Save/load local
+Make users?
+
+For each rule: click to edit rule text *inside the rule*
+Always show rule text?
+Labels for stuff: not for sections

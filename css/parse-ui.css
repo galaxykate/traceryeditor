@@ -1,47 +1,59 @@
-.tracery-grammar {
-	display: inline-block;
-	margin: 3px;
-	padding: 6px;
-	background-color: hsla(40, 20%, 90%, 1);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
-	border: 6px solid violet;
+@font-face {
+  font-family: keyFont;
+  src: url(fonts/Nunito-Regular.ttf);
 }
 
-.tracery-symbol-key {
-	border-radius: 30px;
+.tracery-node {
+	box-sizing: border-box;
+	align-self:flex-start;
+	vertical-align: top;
 	display: inline-block;
-	margin: 1px;
+	
+	margin: 2px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+	
+}
 
-	padding: 1px 2px;
-	background-color: hsla(190, 90%, 70%, 1);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+.tracery-node-emptynode {
+	background-color: hsla(5, 100%, 70%, 1);
+	color: hsla(5, 100%, 30%, 1);
 }
 
 
-.tracery-symbol-rules {
-	display: inline-block;
-	margin: 3px;
-	padding: 6px;
-	background-color: hsla(40, 20%, 90%, 1);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+.tracery-node.selected {
 	border: 1px solid magenta;
 }
 
-
-.tracery-node {
+.tracery-node-labelsection {
+	text-align: center;
 	display: inline-block;
-	margin: 2px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+
+}
+
+.tracery-node-labelsection-item {
+	display: inline-block;
 	
+}
+
+.tracery-node-labelsection .label {
+	font-style: italic;
+	font-size: .2em;
+}
+
+.tracery-node-raw {
+	margin: 0px;
 }
 
 .tracery-node-rule {
-	background-color: hsla(200, 70%, 90%, 1);
-	border: 2px solid hsla(200, 90%, 50%, 1);
-	
+	margin: 2px;
+	padding: 1px 4px;
+	background-color: hsla(200, 70%, 100%, .6);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+	border-radius: 10px;
 }
 
 .tracery-node-error {
+	margin: 1px;
 	display: inline-block;
 	background-color: hsla(0, 70%, 90%, 1);
 	color: hsla(0, 70%, 50%, 1);
@@ -55,11 +67,12 @@
 	
 }
 
-.tracery-node>.content {
-	display: flex;
-	flex-direction: row;
-}
+.tracery-node-plainkey {
+	display: inline-block;
+	font-weight: bold;
+	font-family: keyFont, Arial, sanserif;
 
+}
 
 .tracery-node-error .content {
 	font-size: 80%;
@@ -68,23 +81,69 @@
 }
 
 .tracery-node-action {
-	background-color: hsla(140, 40%, 90%, 1);
-	border: 2px solid hsla(140, 80%, 50%, 1);
+	background-color: hsla(140, 90%, 60%, 1);
+	border: 2px solid hsla(140, 90%, 20%, 1);
 	
+}
+
+.tracery-node-push,.tracery-node-pop {
+	background-color: hsla(140, 80%, 90%, 1);
+	color: hsla(140, 40%, 40%, 1);
+	border: 2px solid hsla(140, 80%, 50%, 1);	
+}
+
+.tracery-node-pop{
+	border-radius: 3px 30px 30px 3px;
+}
+
+.tracery-node-push{
+	border-radius: 30px 3px 3px 30px;
 }
 
 .tracery-node-tag {
 	overflow: hidden;
 	border-radius: 10px;
 	background-color: hsla(180, 60%, 90%, 1);
+
+	color: hsla(180, 90%, 40%, 1);
+	border: 2px solid hsla(180, 80%, 50%, 1);
+	
+}
+
+.tracery-node-section-tagsource {
+	
+}
+
+.tracery-node-section-tagmods {
+	margin: 3px;
+	padding: 2px 4px;
+	border-radius: 10px;
+	background-color: hsla(180, 70%, 80%, 1);
+}
+
+
+
+.tracery-node-sectionlabel {
+	font-size: 60%;
+	font-style: italic;
+	color:  hsla(320, 0%, 0%, .4);
+}
+.tracery-node-section {
+box-sizing: border-box;
 	
 }
 
 
+
+
 .tracery-node-key {
-	padding: 2px 4px;
-	color:hsla(180, 60%, 30%, 1);
-	font-family: monospace;
+	border-radius: 10px;
+	border: 1px solid hsla(140, 70%, 50%, 1);
+	background-color: hsla(140, 70%, 80%, 1);
+}
+
+.tracery-node-key pre {
+	font-family: keyFont, Arial, sanserif;
 }
 
 
@@ -97,15 +156,34 @@
 
 }
 .tracery-node pre {
+	display: inline-block;
 	margin: 0px;
 	
 }
 .tracery-node-text {
+	display: inline-block;
 	padding: 2px 4px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
-	background-color: hsla(40, 10%, 100%, 1);
+	
 }
 
+.tracery-node-mods {
+	display: inline-block;
+	background-color: hsla(290, 20%, 90%, 1);
+}
+
+
+.tracery-node-operator {
+	text-align: center;
+	border-radius: 40px;
+	background-color: hsla(140, 90%, 70%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
+.tracery-node-number {
+	text-align: center;
+	border-radius: 40px;
+	background-color: hsla(240, 90%, 70%, 1);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+}
 .tracery-node-type {
 	font-size: 80%;
 	font-weight: bold;
@@ -118,6 +196,83 @@
 .tracery-node-raw-oneline pre {
 
 	white-space: nowrap;   
+}
+
+.tracery-node-fxn {
+	padding: 0px 2px;
+	border-radius: 20px;
+	background-color: hsla(290, 100%, 80%, 1);	
+	color: hsla(290, 100%, 30%, 1);	
+}
+
+
+.tracery-node-address {
+	padding: 2px 5px;
+	border-radius: 4px 30px 30px 4px ;
+	background-color: hsla(320, 100%, 80%, 1);	
+	color: hsla(320, 100%, 30%, 1);	
+}
+
+.tracery-node-content {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	
+}
+
+.tracery-node-parameters {
+	border: solid;
+	border-radius: .6em;
+	border-width: 0em .2em;
+	display: flex;
+	flex-direction: row;
+	
+	border-color: hsla(0, 0%, 0%, .4);
+	
+}
+
+.tracery-node-parameter {
+	padding: 0px 2px;
+	display: flex;
+	flex-direction: row;
+}
+
+.tracery-node-punctuation {
+	display: inline-block;
+	text-align: center;
+	width: .5em;
+	height: 1em;
+}
+
+
+
+.tracery-previewnode {
+	display: inline-block;
+}
+
+.tracery-previewnode {
+	text-align: center;
+}
+
+.tracery-previewnode-rule {
+	padding: 2px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+}
+
+pre.tracery-previewnode-text  {
+	margin: 0px;
+}
+
+.tracery-previewnode-finished{
+	background-color: hsla(40, 20%, 90%, .3);
+	font-size: 70%;
+	font-style: italic;
+}
+
+.tracery-previewnode-address{
+	padding: 0px 3px;
+	font-size: 70%;
+	font-weight: bold;
 }
 
 

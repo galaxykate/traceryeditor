@@ -77,8 +77,17 @@ tag syntax for path/keys:
 
 	
 
+# rule generators
+There is no actual rule generator, its either a 
+* string
+* array of rule generators
+* address
+* function
+* comprehension
+* ???
 
-
+A rule generator is anything you can get a list of rules from
+getRule()?
 
 
 
